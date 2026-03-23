@@ -22,11 +22,28 @@ While the game features a light pirate theme, the main focus is on implementing 
 
 ---
 
-## Screenshots:
-![Gameplay](img/img6.png)
-![Placement](img/img2.png)
-![Score Board]((img/img4.png)(img/img5.png))
-![Victory Screen]((img/img3.png))
+## 📸 Screenshots
+
+### Gameplay
+<p align="center">
+  <img src="img/img6.png" width="600"/>
+</p>
+
+### Ship Placement
+<p align="center">
+  <img src="img/img2.png" width="600"/>
+</p>
+
+### Score Board
+<p align="center">
+  <img src="img/img4.png" width="500"/>
+  <img src="img/img5.png" width="500"/>
+</p>
+
+### Victory Screen
+<p align="center">
+  <img src="img/img3.png" width="600"/>
+</p>
 
 ## ⚙️ How to Run
 
