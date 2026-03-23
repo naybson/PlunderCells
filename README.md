@@ -22,6 +22,12 @@ While the game features a light pirate theme, the main focus is on implementing 
 
 ---
 
+## Screenshots:
+![Gameplay](img/img6.png)
+![Placement](img/img2.png)
+![Score Board]((img/img4.png)(img/img5.png))
+![Victory Screen]((img/img3.png))
+
 ## ⚙️ How to Run
 
 ```bash
