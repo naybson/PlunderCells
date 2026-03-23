@@ -46,10 +46,13 @@ While the game features a light pirate theme, the main focus is on implementing 
 </p>
 
 ## ⚙️ How to Run
+### Requirements
+- Windows OS (uses Windows terminal behavior)
+- Visual Studio (recommended)
+
+---
+### Run via Git (Recommended)
 
 ```bash
 git clone https://github.com/naybson/PlunderCells.git
-```
----
 
-# 📸 Screenshots
