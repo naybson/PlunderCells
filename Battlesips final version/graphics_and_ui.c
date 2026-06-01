@@ -306,7 +306,7 @@ bool GetPlayerInput(int* inputRow, int* inputCol)
 #ifndef _WIN32
 	platform_pause_raw();
 #endif
-	int correctInput = scanf(" %c%c", &firstChar, &secondChar);
+	int correctInput = scanf_s(" %c%c", &firstChar, 1, &secondChar, 1);
 #ifndef _WIN32
 	platform_resume_raw();
 #endif

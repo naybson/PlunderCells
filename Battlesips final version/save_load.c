@@ -31,7 +31,7 @@ bool getIntInput(const char* prompt, int* output, const char* color)
 #ifndef _WIN32
     platform_pause_raw();
 #endif
-    int result = scanf("%d", output);
+    int result = scanf_s("%d", output);
 #ifndef _WIN32
     platform_resume_raw();
 #endif
@@ -81,7 +81,7 @@ bool findPlayerName(const char* searchName, Player* foundPlayer)
     }
 
     // Read each player from file
-    while (fscanf(file, "%s %d %d", tempPlayer.name, &tempPlayer.rank, &tempPlayer.score) == 3)
+    while (fscanf_s(file, "%s %d %d", tempPlayer.name, (unsigned)sizeof(tempPlayer.name), &tempPlayer.rank, &tempPlayer.score) == 3)
     {
         if (strcmp(tempPlayer.name, searchName) == 0)
         {
@@ -177,7 +177,7 @@ Player handleNewPlayerCreation()
 #ifndef _WIN32
         platform_pause_raw();
 #endif
-        scanf("%s", enteredName);
+        scanf_s("%s", enteredName, (unsigned)sizeof(enteredName));
 #ifndef _WIN32
         platform_resume_raw();
 #endif
@@ -206,7 +206,7 @@ Player handleNewPlayerCreation()
 #ifndef _WIN32
             platform_pause_raw();
 #endif
-            scanf("%d", &nameChoice);
+            scanf_s("%d", &nameChoice);
 #ifndef _WIN32
             platform_resume_raw();
 #endif
@@ -245,7 +245,7 @@ Player handleReturningPlayerLogin()
 #ifndef _WIN32
         platform_pause_raw();
 #endif
-        scanf("%s", enteredName);
+        scanf_s("%s", enteredName, (unsigned)sizeof(enteredName));
 #ifndef _WIN32
         platform_resume_raw();
 #endif
@@ -274,7 +274,7 @@ Player handleReturningPlayerLogin()
 #ifndef _WIN32
             platform_pause_raw();
 #endif
-            scanf("%d", &nameChoice);
+            scanf_s("%d", &nameChoice);
 #ifndef _WIN32
             platform_resume_raw();
 #endif
@@ -670,7 +670,7 @@ void updatePlayerInFile(Player* p)
     }
 
     // Copy players one by one, updating the target player
-    while (fscanf(originalFile, "%s %d %d", tempPlayer.name,
+    while (fscanf_s(originalFile, "%s %d %d", tempPlayer.name, (unsigned)sizeof(tempPlayer.name),
         &tempPlayer.rank, &tempPlayer.score) == 3)
     {
         if (strcmp(tempPlayer.name, p->name) == 0)
@@ -731,8 +731,8 @@ void ShowScoreBoard()
     }
 
     // Load all players from file
-    while (fscanf(file, "%s %d %d",
-        playerList[playerCount].name,
+    while (fscanf_s(file, "%s %d %d",
+        playerList[playerCount].name, (unsigned)sizeof(playerList[playerCount].name),
         &playerList[playerCount].rank,
         &playerList[playerCount].score) == 3)
     {
