@@ -1,0 +1,6 @@
+Talya 3 500
+Niv 3 770
+Bob 3 775
+Yoni 1 370
+billy 1 340
+Hook 3 960
